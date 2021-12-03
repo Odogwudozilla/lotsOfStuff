@@ -1,0 +1,272 @@
+zeitstempel		Zeitstempel	String	Nachricht
+nachrichtentyp		Nachrichtentyp	String	Nachricht	Nachrichtenkopf
+betriebsart		Betriebsart	String	Nachricht	Nachrichtenkopf
+listeNachrichtenId		ListeNachrichtenId	String[]	Nachricht	Nachrichtenkopf	ListeNachrichtenId	NachrichtenId
+datumEndeVersicherungsschutz		DatumEndeVersicherungsschutz	String	Nachricht
+datumAusserbetriebsetzung		DatumAusserbetriebsetzung	String	Nachricht
+ping		Ping	String	Nachricht
+versicherungsunternehmensnr		Versicherungsunternehmensnummer	String	Nachricht
+sonderzeichen		Sonderzeichen	String	Nachricht
+anfragenummer		Anfragenummer	String	Nachricht
+versicherungsbestaetigungsnr		Versicherungsbestaetigungsnummer	String	Nachricht
+vbArt		VbArt	String	Nachricht
+vbAbrufbarBis		VbAbrufbarBis	String	Nachricht
+vbIstNochZuDrucken		VbIstNochZuDrucken	String	Nachricht
+vbFormular		VbFormular	String	Nachricht
+vbFormularGewuenscht		VbFormularGewuenscht	String	Nachricht
+pruefergebnis		Pruefergebnis	String	Nachricht
+vkzPruefergebnis		VkzPruefergebnis	String	Nachricht
+zulassungsfahrten		Zulassungsfahrten	String	Nachricht
+zeitpunktAenderung		ZeitpunktAenderung	String	Nachricht
+unternehmensart		Unternehmensart	String	Nachricht	Versicherung
+versicherungsunternehmensnr	VER	Versicherungsunternehmensnummer	String	Nachricht	Versicherung
+name1		Name1	String	Nachricht	Versicherung
+name2		Name2	String	Nachricht	Versicherung
+name3		Name3	String	Nachricht	Versicherung
+name4		Name4	String	Nachricht	Versicherung
+geschaeftsstelleVersicherung		GeschaeftsstelleVersicherung	String	Nachricht	Versicherung
+agenturVersicherung		AgenturVersicherung	String	Nachricht	Versicherung
+datumVersicherungsbeginn		DatumVersicherungsbeginn	String	Nachricht	Versicherung
+versicherungsscheinnummer	VER	Versicherungsscheinnummer	String	Nachricht	Versicherung
+bonitaetszugangsnummer		Bonitaetszugangsnummer	String	Nachricht
+bonitaetszugangspasswort		Bonitaetszugangspasswort	String	Nachricht
+bonitaetspruefungscode		Bonitaetspruefungscode	String	Nachricht
+bonitaetsanfragegrund		Bonitaetsanfragegrund	String	Nachricht
+nachname	VN	Nachname	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+namensbestandteil	VN	Namensbestandteil	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+vorname	VN	Vorname	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+vornameZuRechtNichtVorhande	VN	VornameZuRechtNichtVorhanden	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+tagDerGeburt	VN	TagDerGeburt	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+geschlecht	VN	Geschlecht	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+doktorgrad	VN	Doktorgrad	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+ordensname	VN	Ordensname	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+kuenstlername	VN	Kuenstlername	String	Nachricht	Versicherungsnehmer	NatuerlichePerson
+nameJuristischePerson	VN	NameJuristischePerson	String	Nachricht	Versicherungsnehmer	JuristischePerson
+nameVereinigung	VN	NameVereinigung	String	Nachricht	Versicherungsnehmer	Vereinigung
+nachname	VNV	Nachname	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+namensbestandteil	VNV	Namensbestandteil	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+vorname	VNV	Vorname	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+vornameZuRechtNichtVorhande	VNV	VornameZuRechtNichtVorhanden	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+tagDerGeburt	VNV	TagDerGeburt	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+geschlecht	VNV	Geschlecht	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+doktorgrad	VNV	Doktorgrad	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+ordensname	VNV	Ordensname	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+kuenstlername	VNV	Kuenstlername	String	Nachricht	Versicherungsnehmer	Vereinigung	NatuerlichePerson
+postleitzahl	VN	Postleitzahl	String	Nachricht	Versicherungsnehmer	Anschrift
+postfach	VN	Postfach	String	Nachricht	Versicherungsnehmer	Anschrift
+postleitzahlPostfach	VN	PostleitzahlPostfach	String	Nachricht	Versicherungsnehmer	Anschrift
+wohnort	VN	Wohnort	String	Nachricht	Versicherungsnehmer	Anschrift
+staat	VN	Staat	String	Nachricht	Versicherungsnehmer	Anschrift
+strasse	VN	Strasse	String	Nachricht	Versicherungsnehmer	Anschrift
+hausnummer	VN	Hausnummer	String	Nachricht	Versicherungsnehmer	Anschrift
+adressierungszusaetze	VN	Adressierungszusaetze	String	Nachricht	Versicherungsnehmer	Anschrift
+gemeindeschluessel	VN	Gemeindeschluessel	String	Nachricht	Versicherungsnehmer	Anschrift
+strassenschluessel	VN	Strassenschluessel	String	Nachricht	Versicherungsnehmer	Anschrift
+kundennummerVU		KundennummerVU	String	Nachricht	Versicherungsnehmer
+kundennummerVM		KundennummerVM	String	Nachricht	Versicherungsnehmer
+halterAbweichendVonVersNehmer		HalterAbweichendVonVersicherungsnehmer	String	Nachricht	Halter
+nachname	HAL	Nachname	String	Nachricht	Halter	NatuerlichePerson
+namensbestandteil	HAL	Namensbestandteil	String	Nachricht	Halter	NatuerlichePerson
+vorname	HAL	Vorname	String	Nachricht	Halter	NatuerlichePerson
+vornameZuRechtNichtVorhande	HAL	VornameZuRechtNichtVorhanden	String	Nachricht	Halter	NatuerlichePerson
+tagDerGeburt	HAL	TagDerGeburt	String	Nachricht	Halter	NatuerlichePerson
+geschlecht	HAL	Geschlecht	String	Nachricht	Halter	NatuerlichePerson
+doktorgrad	HAL	Doktorgrad	String	Nachricht	Halter	NatuerlichePerson
+ordensname	HAL	Ordensname	String	Nachricht	Halter	NatuerlichePerson
+kuenstlername	HAL	Kuenstlername	String	Nachricht	Halter	NatuerlichePerson
+nameJuristischePerson	HAL	NameJuristischePerson	String	Nachricht	Halter	JuristischePerson
+nameVereinigung	HAV	NameVereinigung	String	Nachricht	Halter	Vereinigung
+nachname	HAV	Nachname	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+namensbestandteil	HAV	Namensbestandteil	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+vorname	HAV	Vorname	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+vornameZuRechtNichtVorhande	HAV	VornameZuRechtNichtVorhanden	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+tagDerGeburt	HAV	TagDerGeburt	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+geschlecht	HAV	Geschlecht	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+doktorgrad	HAV	Doktorgrad	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+ordensname	HAV	Ordensname	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+kuenstlername	HAV	Kuenstlername	String	Nachricht	Halter	Vereinigung	NatuerlichePerson
+postleitzahl	HAL	Postleitzahl	String	Nachricht	Halter	Anschrift
+postfach	HAL	Postfach	String	Nachricht	Halter	Anschrift
+postleitzahlPostfach	HAL	PostleitzahlPostfach	String	Nachricht	Halter	Anschrift
+wohnort	HAL	Wohnort	String	Nachricht	Halter	Anschrift
+staat	HAL	Staat	String	Nachricht	Halter	Anschrift
+strasse	HAL	Strasse	String	Nachricht	Halter	Anschrift
+hausnummer	HAL	Hausnummer	String	Nachricht	Halter	Anschrift
+adressierungszusaetze	HAL	Adressierungszusaetze	String	Nachricht	Halter	Anschrift
+gemeindeschluessel	HAL	Gemeindeschluessel	String	Nachricht	Halter	Anschrift
+strassenschluessel	HAL	Strassenschluessel	String	Nachricht	Halter	Anschrift
+schluesselHersteller		SchluesselHersteller	String	Nachricht	Fahrzeug
+hersteller		Hersteller	String	Nachricht	Fahrzeug
+schluesselTyp		SchluesselTyp	String	Nachricht	Fahrzeug
+schluesselVarianteVersion		SchluesselVarianteVersion	String	Nachricht	Fahrzeug
+fahrzeugart		Fahrzeugart	String	Nachricht	Fahrzeug
+schluesselFahrzeugklasse		SchluesselFahrzeugklasse	String	Nachricht	Fahrzeug
+schluesselAufbau		SchluesselAufbau	String	Nachricht	Fahrzeug
+textFahrzeugklasse		TextFahrzeugklasse	String	Nachricht	Fahrzeug
+textAufbau		TextAufbau	String	Nachricht	Fahrzeug
+fahrzeugidentifizierungsnummer		Fahrzeugidentifizierungsnummer	String	Nachricht	Fahrzeug
+hubraum		Hubraum	String	Nachricht	Fahrzeug
+nennleistungKw		NennleistungKw	String	Nachricht	Fahrzeug
+merkmalOldtimer		MerkmalOldtimer	String	Nachricht	Fahrzeug
+verwendungFahrzeug		VerwendungFahrzeug	String	Nachricht	Fahrzeug
+listeVerwendungFahrzeug		ListeVerwendungFahrzeug	String[]	Nachricht	Fahrzeug	ListeVerwendungFahrzeug	VerwendungFahrzeug
+kennzeichen		Kennzeichen	String	Nachricht	Kennzeichen
+kennzeichenBisher		KennzeichenBisher	String	Nachricht	Kennzeichen
+merkmalKennzeichenart		MerkmalKennzeichenart	String	Nachricht	Kennzeichen
+listeMerkmalKennzeichenart		ListeMerkmalKennzeichenart	String[]	Nachricht	Kennzeichen	ListeMerkmalKennzeichenart	MerkmalKennzeichenart
+merkmalWechselkennzeichen		MerkmalWechselkennzeichen	String	Nachricht	Kennzeichen
+datumAblaufKennzreservierung		DatumAblaufKennzeichenreservierung	String	Nachricht	Kennzeichen
+betriebszeitraumVon		BetriebszeitraumVon	String	Nachricht	Kennzeichen
+betriebszeitraumBis		BetriebszeitraumBis	String	Nachricht	Kennzeichen
+zeitpunktZuteilungKennzeichen		ZeitpunktZuteilungKennzeichen	String	Nachricht	Kennzeichen
+datumKennzeichenGueltigBis		DatumKennzeichenGueltigBis	String	Nachricht	Kennzeichen
+ablauftageKurzzeitkennzeichen		AblauftageKurzzeitkennzeichen	String	Nachricht	Kennzeichen
+merkmalElektrokennzeichen		MerkmalElektrokennzeichen	String	Nachricht	Kennzeichen
+zustaendigeBehoerdeKreisschlu		ZustaendigeBehoerdeKreisschluessel	String	Nachricht	Behoerde
+zustaendigeBehZusatzziffer	BEH	ZustaendigeBehoerdeZusatzziffer	String	Nachricht	Behoerde
+zeitpunktBearbeitung		ZeitpunktBearbeitung	String	Nachricht	Behoerde
+identZulassungsabschnitt		IdentifikationZulassungsabschnitt	String	Nachricht	Behoerde
+mitteilungIstNachmeldung		MitteilungIstNachmeldung	String	Nachricht	Behoerde
+vbAblehnungsgrund		VbAblehnungsgrund	String	Nachricht
+listeFehlerBei		ListeFehlerBei	String[]	Nachricht	ListeFehlerBei	FehlerBei
+mitteilungsart		Mitteilungsart	String	Nachricht	VuArbeitsgang
+aenderungHalter		AenderungHalter	String	Nachricht	VuArbeitsgang
+aenderungVersicherung		AenderungVersicherung	String	Nachricht	VuArbeitsgang
+aenderungKennzeichen		AenderungKennzeichen	String	Nachricht	VuArbeitsgang
+aenderungFahrzeugklasse		AenderungFahrzeugklasse	String	Nachricht	VuArbeitsgang
+aenderungMerkmalOldtimer		AenderungMerkmalOldtimer	String	Nachricht	VuArbeitsgang
+aenderungVerwendungFahrzeug		AenderungVerwendungFahrzeug	String	Nachricht	VuArbeitsgang
+aenderungMerkmalElektrokennz		AenderungMerkmalElektrokennzeichen	String	Nachricht	VuArbeitsgang
+anzeigeAblehnungsgrund		AnzeigeAblehnungsgrund	String	Nachricht
+datumEingangAnzeigeZulBeh		DatumEingangAnzeigeZulBeh	String	Nachricht
+datumNachversichererAb		DatumNachversichererAb	String	Nachricht
+vbStatus		VbStatus	String	Nachricht
+vuMitteilungsart		VuMitteilungsart	String	Nachricht
+anzahlVersichbestaetigungsnr		AnzahlVersicherungsbestaetigungsnummer	String	Nachricht
+listeVersichbestaetigungsnr		ListeVersicherungsbestaetigungsnummer	String[]	Nachricht	ListeVersicherungsbestaetigungsnummer	Versicherungsbestaetigungsnummer
+zustaendigeBehoerdeKreisschl		ZustaendigeBehoerdeKreisschluessel	String	Nachricht
+zustaendigeBehZusatzziffer		ZustaendigeBehoerdeZusatzziffer	String	Nachricht
+vbVerwenden		VbVerwenden	String	Nachricht
+weitereDatensaetzeVorhanden		WeitereDatensaetzeVorhanden	String	Nachricht
+aktion		Aktion	String	Nachricht
+korrekturFahrzeugidnrUmgehen		KorrekturFahrzeugidentifizierungsnummerUmgehen	String	Nachricht
+korZustaendigeBehoerdeUmgehen		KorrekturZustaendigeBehoerdeUmgehen	String	Nachricht
+zuordnungGDVVermittlernummer		ZuordnungGDVVermittlernummer	String	Nachricht
+bonitaetspruefungSteuerung		BonitaetspruefungSteuerung	String	Nachricht
+pflegeart		Pflegeart	String	Nachricht
+gruppenrechtPflegeart		GruppenrechtPflegeart	String	Nachricht
+gruppePflegeart		GruppePflegeart	String	Nachricht
+nutzerkennung		Nutzerkennung	String	Nachricht
+zugangsberechtigung		Zugangsberechtigung	String	Nachricht
+nutzerPinNeu		NutzerPinNeu	String	Nachricht
+nachname		Nachname	String	Nachricht	NatuerlichePerson
+namensbestandteil		Namensbestandteil	String	Nachricht	NatuerlichePerson
+vorname		Vorname	String	Nachricht	NatuerlichePerson
+vornameZuRechtNichtVorhande		VornameZuRechtNichtVorhanden	String	Nachricht	NatuerlichePerson
+tagDerGeburt		TagDerGeburt	String	Nachricht	NatuerlichePerson
+geschlecht		Geschlecht	String	Nachricht	NatuerlichePerson
+doktorgrad		Doktorgrad	String	Nachricht	NatuerlichePerson
+ordensname		Ordensname	String	Nachricht	NatuerlichePerson
+kuenstlername		Kuenstlername	String	Nachricht	NatuerlichePerson
+nameJuristischePerson		NameJuristischePerson	String	Nachricht	JuristischePerson
+postleitzahl		Postleitzahl	String	Nachricht	Anschrift
+postfach		Postfach	String	Nachricht	Anschrift
+postleitzahlPostfach		PostleitzahlPostfach	String	Nachricht	Anschrift
+wohnort		Wohnort	String	Nachricht	Anschrift
+staat		Staat	String	Nachricht	Anschrift
+strasse		Strasse	String	Nachricht	Anschrift
+hausnummer		Hausnummer	String	Nachricht	Anschrift
+adressierungszusaetze		Adressierungszusaetze	String	Nachricht	Anschrift
+gemeindeschluessel		Gemeindeschluessel	String	Nachricht	Anschrift
+strassenschluessel		Strassenschluessel	String	Nachricht	Anschrift
+telefonnummer		Telefonnummer	String	Nachricht	Kontaktdaten
+faxnummer		Faxnummer	String	Nachricht	Kontaktdaten
+email		Email	String	Nachricht	Kontaktdaten
+korGeschaeftsstelleVersich		KorrekturGeschaeftsstelleVersicherung	String	Nachricht	Korrekturen
+korVersicherungsunternehmensnr		KorrekturVersicherungsunternehmensnummer	String	Nachricht	Korrekturen
+korrekturFahrzeugidnr	KOR	KorrekturFahrzeugidentifizierungsnummer	String	Nachricht	Korrekturen
+pinGueltigBis		PinGueltigBis	String	Nachricht
+nutzerAngemeldet		NutzerAngemeldet	String	Nachricht
+istInAdmingruppe		IstInAdmingruppe	String	Nachricht
+rechtnummer		Rechtnummer	String	Nachricht
+listenrechtEintragKey		ListenrechtEintragKey	String	Nachricht
+rechteklassenname		Rechteklassenname	String	Nachricht
+rechteklassennummer		Rechteklassennummer	String	Nachricht
+beschreibung		Beschreibung	String	Nachricht
+minimalwert		Minimalwert	String	Nachricht
+maximalwert		Maximalwert	String	Nachricht
+kommunikationspartnerkennung		Kommunikationspartnerkennung	String	Nachricht
+kommunikationspartnertyp		Kommunikationspartnertyp	String	Nachricht
+obergruppennummer		Obergruppennummer	String	Nachricht
+kommunikationspartnerursprung		Kommunikationspartnerursprung	String	Nachricht
+nachname	UV	Nachname	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+namensbestandteil	UV	Namensbestandteil	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+vorname	UV	Vorname	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+vornameZuRechtNichtVorhande	UV	VornameZuRechtNichtVorhanden	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+tagDerGeburt	UV	TagDerGeburt	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+geschlecht	UV	Geschlecht	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+doktorgrad	UV	Doktorgrad	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+ordensname	UV	Ordensname	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+kuenstlername	UV	Kuenstlername	String	Nachricht	UngebundenerVermittler	NatuerlichePerson
+nameJuristischePerson	UV	NameJuristischePerson	String	Nachricht	UngebundenerVermittler	JuristischePerson
+postleitzahl	UV	Postleitzahl	String	Nachricht	UngebundenerVermittler	Anschrift
+postfach	UV	Postfach	String	Nachricht	UngebundenerVermittler	Anschrift
+postleitzahlPostfach	UV	PostleitzahlPostfach	String	Nachricht	UngebundenerVermittler	Anschrift
+wohnort	UV	Wohnort	String	Nachricht	UngebundenerVermittler	Anschrift
+staat	UV	Staat	String	Nachricht	UngebundenerVermittler	Anschrift
+strasse	UV	Strasse	String	Nachricht	UngebundenerVermittler	Anschrift
+hausnummer	UV	Hausnummer	String	Nachricht	UngebundenerVermittler	Anschrift
+adressierungszusaetze	UV	Adressierungszusaetze	String	Nachricht	UngebundenerVermittler	Anschrift
+gemeindeschluessel	UV	Gemeindeschluessel	String	Nachricht	UngebundenerVermittler	Anschrift
+strassenschluessel	UV	Strassenschluessel	String	Nachricht	UngebundenerVermittler	Anschrift
+telefonnummer	UV	Telefonnummer	String	Nachricht	UngebundenerVermittler	Kontaktdaten
+faxnummer	UV	Faxnummer	String	Nachricht	UngebundenerVermittler	Kontaktdaten
+email	UV	Email	String	Nachricht	UngebundenerVermittler	Kontaktdaten
+gdvVermittlernummer	UV	GDVVermittlernummer	String	Nachricht	UngebundenerVermittler
+reversierungsstatus		Reversierungsstatus	String	Nachricht
+alleUntergruppen		AlleUntergruppen	String	Nachricht
+korrekturFahrzeugidnr		KorrekturFahrzeugidentifizierungsnummer	String	Nachricht
+eintragungImZfzrErfolgt		EintragungImZfzrErfolgt	String	Nachricht
+vorlageNummer		VorlageNummer	String	Nachricht
+neuanlageMoeglich		NeuanlageMoeglich	String	Nachricht
+vorlageNummer	VD	VorlageNummer	String	Nachricht	VorlageDetail
+vorlageName	VD	VorlageName	String	Nachricht	VorlageDetail
+vorgangsart	VD	Vorgangsart	String	Nachricht	VorlageDetail
+vorlagePflegeart		VorlagePflegeart	String	Nachricht
+vorlageName		VorlageName	String	Nachricht
+vorgangsart		Vorgangsart	String	Nachricht
+listeVorgangsart		ListeVorgangsart	String[]	Nachricht	ListeVorgangsart	Vorgangsart
+portalTyp		PortalTyp	String	Nachricht
+profilpflegeergebnis		Profilpflegeergebnis	String	Nachricht
+datenAbfragezeitpunkt		DatenAbfragezeitpunkt	String	Nachricht
+datenAnzahlEbenen		DatenAnzahlEbenen	String	Nachricht
+datenIndirektePflege		DatenIndirektePflege	String	Nachricht
+versicherungsscheinnummer		Versicherungsscheinnummer	String	Nachricht
+abDatensatzId		AbDatensatzId	String	Nachricht
+anzahlDatensaetze		AnzahlDatensaetze	String	Nachricht
+sortierungSpalte		SortierungSpalte	String	Nachricht
+sortierungRichtung		SortierungRichtung	String	Nachricht
+naechsteDatensatzId		NaechsteDatensatzId	String	Nachricht
+vorgangsnummer		Vorgangsnummer	String	Nachricht
+nurKontextUebersicht		NurKontextUebersicht	String	Nachricht
+kennzZugehoerigesWechselkennz		KennzeichenZugehoerigesWechselkennzeichen	String	Nachricht		Benachrichtigungsauftrag
+bonitaetsvorgangsstatus		Bonitaetsvorgangsstatus	String	Nachricht
+pruefergebnisPositiv		PruefergebnisPositiv	String	Nachricht
+alternativeNutzerkennung		AlternativeNutzerkennung	String	Nachricht
+suchtext		Suchtext	String	Nachricht
+storno		Storno	String	Nachricht
+logistikZustellStatus		LogistikZustellStatus	String	Nachricht
+trackingId		TrackingId	String	Nachricht
+adresslabelFreitext		AdresslabelFreitext	String	Nachricht
+details		Details	String	Nachricht
+smsEingangBehoerde		SMSEingangBehoerde	String	Nachricht
+smsEmpfaenger		SMSEmpfaenger	String	Nachricht
+smsVersichbestaetigungsnr		SMSVersicherungsbestaetigungsnummer	String	Nachricht
+smsVersicherungswechsel		SMSVersicherungswechsel	String	Nachricht
+smsZulassung		SMSZulassung	String	Nachricht
+gdvVermittlernummer		GDVVermittlernummer	String	Nachricht
+IHKRegistrierungsnummer		IHKRegistrierungsnummer	String	Nachricht
+vUNutzerId		VUNutzerId	String	Nachricht
+vUInterneVermittlernummer		VUInterneVermittlernummer	String	Nachricht
+itDienstleisterId		ITDienstleisterId	String	Nachricht
+smsAbsenderkennung		SMSAbsenderkennung	String	Nachricht
