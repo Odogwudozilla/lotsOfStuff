@@ -26,6 +26,9 @@ public class MainRunner {
 				diver.calculateHorizontalByDepthPosition(true)
 		);
 
+
+		demarcation();
+
 	}
 
 	public static void demarcation(){
