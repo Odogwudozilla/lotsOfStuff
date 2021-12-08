@@ -2,6 +2,7 @@ package com.odogwudozilla.adventOfCode;
 
 import java.net.URISyntaxException;
 
+import com.odogwudozilla.adventOfCode.binaryDiagnostic.BinaryDiagnostic;
 import com.odogwudozilla.adventOfCode.dive.Dive;
 import com.odogwudozilla.adventOfCode.sonarSweep.SonarSweep;
 
@@ -28,6 +29,9 @@ public class MainRunner {
 
 
 		demarcation();
+
+		BinaryDiagnostic binaryDiagnostic = new BinaryDiagnostic();
+		//binaryDiagnostic.calculateGammaAndEpsilonRate();
 
 	}
 
