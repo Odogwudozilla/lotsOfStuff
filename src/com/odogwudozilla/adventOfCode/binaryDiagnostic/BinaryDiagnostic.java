@@ -119,16 +119,5 @@ public class BinaryDiagnostic implements IinitiateGeneralFunctions {
 		return ret;
 	}
 
-//	 public List<String> copyFromFile() {
-//		List<String> linez = new ArrayList<>();
-//		// pull data from file
-//		try (Stream<String> lines = Files.lines(filepath)) {
-//			// Populate data from the file into the list
-//			linez = lines.collect(Collectors.toList());
-//
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//			return linez;
-//	}
+
 }
