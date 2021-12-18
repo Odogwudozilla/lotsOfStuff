@@ -3,6 +3,7 @@ package com.odogwudozilla.adventOfCode.sonarSweep;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +11,16 @@ import java.util.Queue;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Stream;
 
+import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
+
 /**
  * --- Day 1: Sonar Sweep ---
  * AdventOfcode: https://adventofcode.com/2021/day/1
  */
-public class SonarSweep {
+public class SonarSweep implements IinitiateGeneralFunctions {
 
 	// the absolute path to the input data
-	private static final String filepath = "C:\\Users\\cnnachor\\lotsOfStuff\\src\\com\\odogwudozilla\\adventOfCode\\sonarSweep\\inputSonarSweep.txt";
+	private static final Path filepath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\sonarSweep\\inputSonarSweep.txt");
 	// Keep track of the matched and non-matched
 	private AtomicReference<Integer> nonMatchCount = new AtomicReference<>(0);
 	private AtomicReference<Integer> matchCount = new AtomicReference<>(0);
@@ -65,7 +68,7 @@ public class SonarSweep {
 		matchCount = new AtomicReference<>(0);
 
 		// Use try-with-resources
-		try (Stream<String> lines = Files.lines(Path.of(filepath))) {
+		try (Stream<String> lines = Files.lines(filepath)) {
 
 			lines.mapToInt(value -> Integer.parseInt(value)) // first convert data to integers
 					.reduce((a,b) -> {
@@ -133,7 +136,7 @@ public class SonarSweep {
 
 
 		//calculate sliding windows
-		try (Stream<String> lines = Files.lines(Path.of(filepath))) {
+		try (Stream<String> lines = Files.lines(filepath)) {
 
 			List<Integer> intList = new ArrayList<>();
 

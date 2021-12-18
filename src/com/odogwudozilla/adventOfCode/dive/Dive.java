@@ -1,19 +1,19 @@
 package com.odogwudozilla.adventOfCode.dive;
 
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+
+import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
 
 /**
  * --- Day 2: Dive! ---
  * AdventOfcode: https://adventofcode.com/2021/day/2
  */
-public class Dive {
+public class Dive  implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
-	private static final String filepath = "C:\\Users\\cnnachor\\lotsOfStuff\\src\\com\\odogwudozilla\\adventOfCode\\dive\\inputDive.txt";
+	private static final Path filepath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\dive\\inputDive.txt");
 
 	public static final String MOVE_FORWARD = "forward";
 	public static final String MOVE_DOWN = "down";
@@ -46,14 +46,10 @@ public class Dive {
 	public Integer calculateHorizontalByDepthPosition(boolean isWithAim) {
 		// empty the list of data input
 		listInput.clear();
-		// pull data from file
-		try (Stream<String> lines = Files.lines(Path.of(filepath))) {
-			// Populate data from the file into the list
-			lines.forEach(value -> listInput.add(value));
 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		// pull data from file
+		listInput = copyFromFile(filepath);
+
 		// Calculate the movements
 		if (isWithAim) {
 			reset();
