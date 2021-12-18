@@ -1,17 +1,16 @@
 package com.odogwudozilla.adventOfCode.binaryDiagnostic;
 
-import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class BinaryDiagnostic {
+import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
+
+public class BinaryDiagnostic implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
-	private static final String filepath = "C:\\Users\\cnnachor\\lotsOfStuff\\src\\com\\odogwudozilla\\adventOfCode\\binaryDiagnostic\\inputBinaryDiagnostic.txt";
+	private static final Path filepath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\binaryDiagnostic\\inputBinaryDiagnostic.txt");
 	private Integer gammaRate;
 	private StringBuilder gammaRateList = new StringBuilder();
 	private Integer epsilonRate;
@@ -33,7 +32,7 @@ public class BinaryDiagnostic {
 
 	public Integer calculateGammaAndEpsilonRate () {
 
-		determineGammaRate(copyFromFile());
+		determineGammaRate(copyFromFile(filepath));
 
 		gammaRate = Integer.parseInt(gammaRateList.toString(), 2);
 		epsilonRate = Integer.parseInt(epsilonRateList.toString(), 2);
@@ -120,16 +119,16 @@ public class BinaryDiagnostic {
 		return ret;
 	}
 
-	private List<String> copyFromFile() {
-		List<String> linez = new ArrayList<>();
-		// pull data from file
-		try (Stream<String> lines = Files.lines(Path.of(filepath))) {
-			// Populate data from the file into the list
-			linez = lines.collect(Collectors.toList());
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-			return linez;
-	}
+//	 public List<String> copyFromFile() {
+//		List<String> linez = new ArrayList<>();
+//		// pull data from file
+//		try (Stream<String> lines = Files.lines(filepath)) {
+//			// Populate data from the file into the list
+//			linez = lines.collect(Collectors.toList());
+//
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//			return linez;
+//	}
 }

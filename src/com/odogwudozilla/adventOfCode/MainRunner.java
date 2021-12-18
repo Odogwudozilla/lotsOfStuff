@@ -27,7 +27,6 @@ public class MainRunner {
 //				diver.calculateHorizontalByDepthPosition(true)
 //		);
 
-
 		demarcation();
 
 		BinaryDiagnostic binaryDiagnostic = new BinaryDiagnostic();
