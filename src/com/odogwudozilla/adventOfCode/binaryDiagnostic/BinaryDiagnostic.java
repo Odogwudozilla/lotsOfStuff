@@ -7,7 +7,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
-
+/**
+ * --- Day 3: Binary Diagnostic ---
+ * AdventOfcode: https://adventofcode.com/2021/day/3
+ */
 public class BinaryDiagnostic implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
 	private static final Path filepath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\binaryDiagnostic\\inputBinaryDiagnostic.txt");

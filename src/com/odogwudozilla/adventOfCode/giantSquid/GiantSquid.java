@@ -11,6 +11,10 @@ import java.util.stream.Stream;
 
 import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
 
+/**
+ * --- Day 3: Giant Squid ---
+ * AdventOfcode: https://adventofcode.com/2021/day/4
+ */
 public class GiantSquid implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
 	private static final Path filePath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\giantSquid\\giantSquid1.txt");
