@@ -16,7 +16,7 @@ public class BinarySearch {
 		List<Integer> myList1 = new ArrayList<>();
 		IntStream.iterate(1, n -> n+1).filter(n -> n%2!=0).limit(100000000).forEach(x -> myList1.add(x));
 
-		System.out.println("Item in index: " + binarySearch0Logn(myList1, 99999) + " was found in iteration: " + iterationCount);
+		System.out.println("Item in index: " + binarySearch0Logn(myList1, 99357) + " was found in iteration: " + iterationCount);
 		System.out.println("Process completed in " + Duration.between(startTime, LocalTime.now()).toMillis() + " milliSeconds");
 
 	}
