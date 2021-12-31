@@ -75,7 +75,7 @@ public class DatabaseFromDumpFile {
 	public void determineAbsoluteDumpFilePath() throws IOException {
 		while (loopCount > 0) {
 			System.out.println("Please input the absolute path of the dump file (eg: C:\\blablabla\\db2dump.dmp)");
-			String userAnswer = userInput.next();
+			String userAnswer = userInput.nextLine();
 			//verify that the right file extension is in the supplied path
 			boolean isDmp = userAnswer.endsWith(".dmp");
 			boolean pathExistsAndWritable = Files.isWritable(Path.of(userAnswer));
