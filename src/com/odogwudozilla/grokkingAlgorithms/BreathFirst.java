@@ -29,7 +29,24 @@ public class BreathFirst {
 	}
 
 	private String determineMangoSeller(Map<String, ArrayDeque<String>> input) {
-		return "testing";
+		String answer = "";
+		for (String eleme : input.keySet()) {
+			String currentName = eleme;
+
+			ArrayDeque<String> toBeChecked = input.get(currentName);
+			String currentValue = toBeChecked.getFirst();
+			if (currentValue.isEmpty()) continue;
+
+			switch (currentName) {
+			case "Odogwu":
+				if (currentValue.equals("Thom")) {
+					answer = currentValue;
+				} else {
+					toBeChecked.pop();
+				}
+			}
+		}
+		return answer;
 	}
 
 	private void mapPeople(List<String> people) {
