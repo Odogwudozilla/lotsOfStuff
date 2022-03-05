@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="commons-math3-3.6.1-javadoc">
+  <library name="commons-cli-1.5">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0" />
     </CLASSES>

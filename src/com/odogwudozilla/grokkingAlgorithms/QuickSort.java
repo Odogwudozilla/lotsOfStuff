@@ -30,7 +30,7 @@ public class QuickSort {
 		List<Integer> less = new ArrayList<>();
 		List<Integer> greater = new ArrayList<>();
 
-		List<Integer> pivotArray = Arrays.asList(pivot);
+		List<Integer> pivotArray = List.of(pivot);
 
 		for (int elem : toBeSorted) {
 			if (elem < pivot) {
