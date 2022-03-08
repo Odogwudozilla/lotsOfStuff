@@ -235,10 +235,10 @@ public class DatabaseFromDumpFile {
 		// Definition of the options.
 		Options commandLineOptions = new Options();
 		commandLineOptions.addOption("h", "help", false, "help info");
-		commandLineOptions.addRequiredOption("i", "input-directory", true, "input directory of the dump file");
-		commandLineOptions.addOption("f", "input-file-name", true, "input file name");
-		commandLineOptions.addOption("d", "use-default-database-location", true, "use default database location");
-		commandLineOptions.addOption("n", "use-default-database-name", true, "use default database name");
+		commandLineOptions.addRequiredOption("i", "input-directory", true, "input directory of the dump file. Please enter the full absolute path to the directory");
+		commandLineOptions.addOption("f", "input-file-name", true, "input file name e.g. \"db2dump.dmp\". This is only necessary if the dmp file is named differently than the default");
+		commandLineOptions.addOption("d", "use-default-database-location", false, "include this param to use the default database location");
+		commandLineOptions.addOption("n", "use-default-database-name", false, "include this param to use the default database name");
 
 		commandLineOptions.getOption("i").setType(File.class);
 		commandLineOptions.getOption("f").setType(String.class);
@@ -288,7 +288,7 @@ public class DatabaseFromDumpFile {
 		String dumpfileFullPath = inputDirectory.toString() + FILE_SEPARATOR + inputFileName;
 		if (!determineAbsoluteDumpFilePath(dumpfileFullPath)) {
 			// The absolute file path cannot be determined.
-			log.severe("The AbsoluteDumpFilePath cannot be determined");
+			log.severe("The path to the dmp file cannot be determined");
 			return false;
 		}
 		if (!prepareAndBackupDmpFile()) {
