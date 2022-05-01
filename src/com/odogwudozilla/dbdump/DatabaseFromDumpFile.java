@@ -1,4 +1,4 @@
-package com.odogwudozilla;
+package com.odogwudozilla.dbdump;
 
 import java.io.File;
 import java.io.IOException;
@@ -231,6 +231,10 @@ public class DatabaseFromDumpFile {
 	}
 
 
+	/**
+	 * @param args arguments from the command line.
+	 * @return {@code true} if arguments successfully processed {@code false} otherwise.
+	 */
 	private boolean handleCommandLineArguments(String[] args) throws ParseException, IOException {
 		// Definition of the options.
 		Options commandLineOptions = new Options();
@@ -264,12 +268,17 @@ public class DatabaseFromDumpFile {
 			return false;
 		}
 
+		if (!commandLineArgs.hasOption("i")){
+			log.info("Input file directory is mandatory program arguments");
+			new HelpFormatter().printHelp(getClass().getSimpleName(), commandLineOptions, true);
+			return false;
+		}
 
 		if (commandLineArgs.hasOption("i")) {
 			inputDirectory = (File) commandLineArgs.getParsedOptionValue("i");
 			// Perform validation on the input directory
 			if (!inputDirectory.exists()) {
-				log.severe("Input file  directory not found: " + inputDirectory.getAbsolutePath());
+				log.severe("Input file directory not found: " + inputDirectory.getAbsolutePath());
 				return false;
 			}
 
@@ -338,7 +347,7 @@ public class DatabaseFromDumpFile {
 		boolean pathExistsAndWritable = Files.isWritable(Path.of(dumpFileArg));
 
 		if (!(isDmp && pathExistsAndWritable)) {
-			log.severe("Wrong file or insufficient permissions");
+			log.severe("Wrong file or insufficient permissions. Please check the file.");
 			return false;
 		}
 
