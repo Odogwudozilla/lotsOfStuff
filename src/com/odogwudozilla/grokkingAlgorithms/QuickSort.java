@@ -25,24 +25,30 @@ public class QuickSort {
 		if (toBeSorted.size() < 2) return toBeSorted;
 		// Starting point of the sorting. The middle is better.
 		int pivot = toBeSorted.get(toBeSorted.size()/2);
+		System.out.println("Pivot is: " + pivot);
 
 		// Define two lists to store elements smaller-than or bigger-than the pivot.
-		List<Integer> less = new ArrayList<>();
-		List<Integer> greater = new ArrayList<>();
+		List<Integer> lessThanPivotArray = new ArrayList<>();
+		List<Integer> greaterThanPivotArray = new ArrayList<>();
 
 		List<Integer> pivotArray = List.of(pivot);
 
 		for (int elem : toBeSorted) {
 			if (elem < pivot) {
-				less.add(elem);
+				lessThanPivotArray.add(elem);
+				System.out.println("Element " + elem + " added to lessThanPivotArray");
 			}
 			if (elem > pivot) {
-				greater.add(elem);
+				greaterThanPivotArray.add(elem);
+				System.out.println("Element " + elem + " added to greaterThanPivotArray");
 			}
 		}
+		System.out.println("------------------------------------------");
+		System.out.println("lessThanPivotArray = " + lessThanPivotArray);
+		System.out.println("greaterThanPivotArray = " + greaterThanPivotArray);
 
 		// Recursively sort both lower and upper bound lists and then merge.
-		return  Stream.of(sortByQuickSort(less), pivotArray, sortByQuickSort(greater))
+		return  Stream.of(sortByQuickSort(lessThanPivotArray), pivotArray, sortByQuickSort(greaterThanPivotArray))
 				.flatMap(Collection::stream)
 				.collect(Collectors.toList());
 
