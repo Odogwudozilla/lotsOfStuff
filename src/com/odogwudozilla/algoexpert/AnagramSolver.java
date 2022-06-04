@@ -25,7 +25,7 @@ public class AnagramSolver {
         Map<Character, Integer> firstStringHash = new HashMap<>();
         Map<Character, Integer> secondStringHash = new HashMap<>();
 
-        // Fill the has maps
+        // Fill the hashmaps
         for (char elem : firstStringArray) {
             if (!firstStringHash.containsKey(elem)) {
                 // The key does not exist. Create it.
