@@ -1,4 +1,4 @@
-package com.odogwudozilla.algoexpert;
+package com.odogwudozilla.algodaily;
 
 import java.util.Arrays;
 

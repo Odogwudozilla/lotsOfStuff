@@ -10,6 +10,7 @@ public class AnagramSolver {
 
         System.out.println(anagramSolver.checkIsAnagramByHash("nameless", "salesmen"));
         System.out.println(anagramSolver.checkIsAnagramBySort("nameless", "salesmen"));
+        System.out.println(anagramSolver.checkIsAnagramBySort("Mary", "Army"));
 
     }
 
@@ -53,8 +54,8 @@ public class AnagramSolver {
 
 
     private boolean checkIsAnagramBySort(String firstString, String secondString) {
-        char[] firstStringArray = firstString.toCharArray();
-        char[] secondStringArray = secondString.toCharArray();
+        char[] firstStringArray = firstString.toLowerCase().toCharArray();
+        char[] secondStringArray = secondString.toLowerCase().toCharArray();
 
         // sort both char arrays
         Arrays.sort(firstStringArray);
