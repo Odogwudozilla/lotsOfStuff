@@ -26,7 +26,7 @@ public class TwoNumberSum {
 				System.out.println(checkHash);
 				return new int []{element, y};
 			} else {
-				// the complement isn't in the hastable yet, add the current number.
+				// the complement is not in the hashtable yet, add the current number.
 				checkHash.put(element, false);
 				System.out.println(checkHash);
 			}

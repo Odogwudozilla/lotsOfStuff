@@ -14,8 +14,6 @@ public class MonotonicArray {
     }
 
     private boolean findMonotony(int[] inputArray) {
-        // Sort the array
-        //Arrays.sort(inputArray);
 
         // Edge case: a one-element or empty array is certainly monotonic.
         if (inputArray.length < 2) return true;
