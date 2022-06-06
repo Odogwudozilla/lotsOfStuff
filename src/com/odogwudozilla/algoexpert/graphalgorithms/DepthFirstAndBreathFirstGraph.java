@@ -19,13 +19,13 @@ public class DepthFirstAndBreathFirstGraph {
 
         DepthFirstAndBreathFirstGraph depthFirstAndBreathFirstGraph = new DepthFirstAndBreathFirstGraph();
         depthFirstAndBreathFirstGraph.depthFirstPrint(graph, "a");
-        System.out.println();
+        System.out.println("Finished depthFirstPrint");
         depthFirstAndBreathFirstGraph.depthFirstByRecursionPrint(graph, "a");
 
-        System.out.println();
+        System.out.println("Finished depthFirstByRecursionPrint");
         depthFirstAndBreathFirstGraph.breathFirstGraphPrint(graph, "a");
 
-        System.out.println();
+        System.out.println("Finished breathFirstGraphPrint");
         System.out.println(depthFirstAndBreathFirstGraph.hasPath(graph, "b", "d"));
     }
 

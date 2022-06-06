@@ -10,7 +10,7 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Can you write a function that reverses an inputted string without using the built-in Array#reverse method?
+ * Can you write a function that reverses an inputted string without using the built-in Array#reverseList method?
  *
  * Let's look at some examples. So, calling:
  *
