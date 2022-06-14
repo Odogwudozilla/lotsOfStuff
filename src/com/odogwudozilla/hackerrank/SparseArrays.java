@@ -37,7 +37,7 @@ public class SparseArrays {
         for(String eleme : strings) {
             if(queriesMap.containsKey(eleme)) {
 
-                queriesMap.computeIfPresent(eleme,(k, v) -> v + 1);
+                queriesMap.computeIfPresent(eleme,(key,value) -> value + 1);
             }
         }
 
