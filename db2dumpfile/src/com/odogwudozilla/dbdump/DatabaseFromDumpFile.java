@@ -44,10 +44,6 @@ public class DatabaseFromDumpFile {
 	 * The directory containing the dump file to be processed.
 	 */
 	private File inputDirectory;
-	/**
-	 * Name of an individual dump file to be processed.
-	 */
-	private String inputFileName;
 
 	private String databaseLocation;
 	private String databaseName;
@@ -63,8 +59,7 @@ public class DatabaseFromDumpFile {
 		// Process all commandline data set input data
 		if (!databaseFromDumpFile.handleCommandLineArguments(args)) {
 			// The error has been logged.
-			System.exit(1);
-			iSleep(3);
+			pressQToExit();
 			return;
 		}
 
@@ -73,8 +68,7 @@ public class DatabaseFromDumpFile {
 		// Do not perform the update if the file already has been previously updated.
 		if (fileAlreadyUpdated.isPresent()) {
 			log.warning("The dmp file has already been updated. Exiting...");
-			iSleep(3);
-			System.exit(1);
+			pressQToExit();
 		}
 
 		try {
@@ -87,6 +81,7 @@ public class DatabaseFromDumpFile {
 		// Write the file contents.
 		Files.write(databaseFromDumpFile.getAbsoluteDumpFilePath(), databaseFromDumpFile.getFileContent(), StandardCharsets.UTF_8);
 		log.info("Database Dump file successfully processed");
+		shutDownInSeconds(10);
 	}
 
 	/**
@@ -103,11 +98,48 @@ public class DatabaseFromDumpFile {
 		}
 	}
 
+	private static void pressQToExit() {
+		int counter = 3;
+		while (counter > 0) {
+			log.info("Press 'q' to exit");
+			String lastWord = new Scanner(System.in).nextLine();
+			if ("q".equalsIgnoreCase(lastWord)) {
+				System.exit(1);
+			}
+			counter--;
+		}
+	}
+
+	private static void shutDownInSeconds(int seconds) {
+		System.out.print("Shutting down...");
+
+		while (seconds > 0) {
+			System.out.print(seconds + "...");
+			iSleep(1);
+			seconds--;
+		}
+	}
+
+	private static void processDumpFile(DatabaseFromDumpFile databaseFromDumpFile) throws IOException {
+		databaseFromDumpFile.replaceTargetDirectory();
+		iSleep(2);
+		databaseFromDumpFile.replaceDbNameAndSchema();
+		iSleep(2);
+		databaseFromDumpFile.replaceTableSpacePath();
+		iSleep(2);
+		databaseFromDumpFile.appendAttachToDb2();
+		iSleep(2);
+		databaseFromDumpFile.appendToConnectToDbName();
+		iSleep(2);
+		databaseFromDumpFile.appendToDb2Move();
+		iSleep(2);
+	}
+
 
 	/**
 	 * Replaces the target directory in the file with the chosen one
 	 */
-	public void replaceTargetDirectory() throws IOException {
+	public void replaceTargetDirectory() {
 		List<String> eachFileLine = new ArrayList<>();
 		for (String line : getFileContent()) {
 			if (line.contains("ON <directory-waar-db-komt-te-staan>")) {
@@ -132,7 +164,7 @@ public class DatabaseFromDumpFile {
 	/**
 	 * Replace the DB name and Schema as chosen by the user
 	 */
-	public void replaceDbNameAndSchema() throws IOException {
+	public void replaceDbNameAndSchema() {
 		List<String> eachFileLine = new ArrayList<>();
 		int dbCount = 0;
 		int schemaCount = 0;
@@ -159,7 +191,7 @@ public class DatabaseFromDumpFile {
 	/**
 	 * Replaces the tableSpace path
 	 */
-	public void replaceTableSpacePath() throws IOException {
+	public void replaceTableSpacePath() {
 		List<String> eachFileLine = new ArrayList<>();
 		for (String line : getFileContent()) {
 			if (line.contains("/data/db2inst1/NODE0000/" + getDatabaseName() + "/")) {
@@ -177,7 +209,7 @@ public class DatabaseFromDumpFile {
 	/**
 	 * Append additional text to the 'create database'
 	 */
-	public void appendAttachToDb2() throws IOException {
+	public void appendAttachToDb2() {
 		List<String> eachFileLine = new ArrayList<>();
 		for (String line : getFileContent()) {
 			if (line.contains("create database")) {
@@ -195,7 +227,7 @@ public class DatabaseFromDumpFile {
 	/**
 	 * Append additional text to the 'connect to'
 	 */
-	public void appendToConnectToDbName() throws IOException {
+	public void appendToConnectToDbName() {
 		String connectToDbName = "connect to " + getDatabaseName();
 		List<String> eachFileLine = new ArrayList<>();
 		for (String line : getFileContent()) {
@@ -214,7 +246,7 @@ public class DatabaseFromDumpFile {
 	/**
 	 * Append additional text to the 'db2move...'
 	 */
-	public void appendToDb2Move() throws IOException {
+	public void appendToDb2Move() {
 		String db2Move = "db2move " + getDatabaseName() + " load";
 		List<String> eachFileLine = new ArrayList<>();
 		for (String line : getFileContent()) {
@@ -239,7 +271,7 @@ public class DatabaseFromDumpFile {
 		// Definition of the options.
 		Options commandLineOptions = new Options();
 		commandLineOptions.addOption("h", "help", false, "help info");
-		commandLineOptions.addRequiredOption("i", "input-directory", true, "input directory of the dump file. Please enter the full absolute path to the directory");
+		commandLineOptions.addOption("i", "input-directory", true, "input directory of the dump file. Please enter the full absolute path to the directory");
 		commandLineOptions.addOption("f", "input-file-name", true, "input file name e.g. \"db2dump.dmp\". This is only necessary if the dmp file is named differently than the default");
 		commandLineOptions.addOption("d", "use-default-database-location", false, "include this param to use the default database location");
 		commandLineOptions.addOption("n", "use-default-database-name", false, "include this param to use the default database name");
@@ -269,9 +301,12 @@ public class DatabaseFromDumpFile {
 		}
 
 		if (!commandLineArgs.hasOption("i")){
-			log.info("Input file directory is mandatory program arguments");
-			new HelpFormatter().printHelp(getClass().getSimpleName(), commandLineOptions, true);
-			return false;
+			inputDirectory = FileSystems.getDefault().getPath("").toAbsolutePath().toFile();
+			if (!inputDirectory.isDirectory()) {
+				log.info("Input file directory '" + inputDirectory + "' is invalid");
+				new HelpFormatter().printHelp(getClass().getSimpleName(), commandLineOptions, true);
+				return false;
+			}
 		}
 
 		if (commandLineArgs.hasOption("i")) {
@@ -287,7 +322,10 @@ public class DatabaseFromDumpFile {
 				return false;
 			}
 		}
+		log.info("Input file directory is '" + inputDirectory);
 
+		// Name of an individual dump file to be processed.
+		String inputFileName;
 		if (commandLineArgs.hasOption("f")) {
 			inputFileName = (String) commandLineArgs.getParsedOptionValue("f");
 		} else {
@@ -308,13 +346,13 @@ public class DatabaseFromDumpFile {
 		if (commandLineArgs.hasOption("d")) {
 			setDatabaseLocation("C:\\DB2\\NODE0000\\");
 		} else {
-			log.info("Please enter the location you want to use: ");
+			log.info("Please enter the location you want to use for the database (e.g. 'C:\\DB2\\NODE0000\\'): ");
 			String answer = userInput.next();
 			if (!answer.endsWith(FILE_SEPARATOR)) {
 				answer += FILE_SEPARATOR;
 			}
 			if (!isValidPath(answer)){
-				log.severe("Invalid database location");
+				log.severe("Invalid database location. Rerun the program with arg '-d' to use the default DB location");
 				return false;
 			}
 			setDatabaseLocation(answer);
@@ -379,28 +417,13 @@ public class DatabaseFromDumpFile {
 		return true;
 	}
 
-	private static void processDumpFile(DatabaseFromDumpFile databaseFromDumpFile) throws IOException {
-		databaseFromDumpFile.replaceTargetDirectory();
-		iSleep(2);
-		databaseFromDumpFile.replaceDbNameAndSchema();
-		iSleep(2);
-		databaseFromDumpFile.replaceTableSpacePath();
-		iSleep(2);
-		databaseFromDumpFile.appendAttachToDb2();
-		iSleep(2);
-		databaseFromDumpFile.appendToConnectToDbName();
-		iSleep(2);
-		databaseFromDumpFile.appendToDb2Move();
-		iSleep(2);
-	}
 
 	public static boolean isValidPath(String path) {
 		try {
-			Paths.get(path);
+			return Paths.get(path).isAbsolute();
 		} catch (InvalidPathException | NullPointerException ex) {
 			return false;
 		}
-		return true;
 	}
 
 
@@ -446,10 +469,6 @@ public class DatabaseFromDumpFile {
 
 	public List<String> getFileContent() {
 		return fileContent;
-	}
-
-	public void setFileContent(List<String> fileContent) {
-		DatabaseFromDumpFile.fileContent = fileContent;
 	}
 
 }

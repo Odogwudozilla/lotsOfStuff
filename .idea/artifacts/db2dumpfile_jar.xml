@@ -1,14 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="lotsOfStuff:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/db2dump_jar</output-path>
-    <root id="archive" name="lotsOfStuff.jar">
-      <element id="module-output" name="lotsOfStuff" />
+  <artifact type="jar" name="db2dumpfile:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/db2dumpfile_jar</output-path>
+    <root id="archive" name="db2dumpfile.jar">
+      <element id="module-output" name="db2dumpfile" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0/commons-cli-1.5.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0/commons-cli-1.5.0-tests.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0/commons-cli-1.5.0-javadoc.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0/commons-cli-1.5.0-sources.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../Downloads/commons-cli-1.5.0-bin/commons-cli-1.5.0/commons-cli-1.5.0-test-sources.jar" path-in-jar="/" />
-      <element id="library" level="application" name="apidocs" />
     </root>
   </artifact>
 </component>
