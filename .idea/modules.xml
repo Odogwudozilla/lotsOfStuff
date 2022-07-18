@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/db2dumpfile/db2dumpfile.iml" filepath="$PROJECT_DIR$/db2dumpfile/db2dumpfile.iml" />
       <module fileurl="file://$PROJECT_DIR$/lotsOfStuff.iml" filepath="$PROJECT_DIR$/lotsOfStuff.iml" />
     </modules>
   </component>
