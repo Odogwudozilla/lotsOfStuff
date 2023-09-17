@@ -26,7 +26,7 @@ public class DepthFirstAndBreathFirstGraph {
         depthFirstAndBreathFirstGraph.breathFirstGraphPrint(graph, "a");
 
         System.out.println("Finished breathFirstGraphPrint");
-        System.out.println(depthFirstAndBreathFirstGraph.hasPath(graph, "b", "d"));
+        System.out.println(depthFirstAndBreathFirstGraph.hasPath(graph, "a", "f"));
     }
 
     private void depthFirstPrint(Map<String, List<String>> graph, String source) {
@@ -76,6 +76,7 @@ public class DepthFirstAndBreathFirstGraph {
 
             for (String neighbour : graph.get(currentQueueItem)) {
                 // Loop through each neighbour of the currentItem and add it to the queue.
+                System.out.println("adding neighbour: " + neighbour);
                 queue.add(neighbour);
             }
         }

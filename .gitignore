@@ -1,0 +1,12 @@
+/.idea/
+# IntelliJ metadata
+*.iml
+.idea
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directories
+gradle_build
+buildSrc/build
+/build

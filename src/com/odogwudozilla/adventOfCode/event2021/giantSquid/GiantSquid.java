@@ -1,4 +1,4 @@
-package com.odogwudozilla.adventOfCode.giantSquid;
+package com.odogwudozilla.adventOfCode.event2021.giantSquid;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +19,7 @@ public class GiantSquid implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
 	private static final Path filePath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\giantSquid\\giantSquid1.txt");
 
-	int drawnNumbers[] = new int[100];
+	int[] drawnNumbers = new int[100];
 
 	int matrix1[][] = new int[5][5];
 	int matrix2[][] = new int[5][5];

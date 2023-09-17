@@ -9,4 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="commons-cli-1.5" level="project" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="ed44e109-38d6-4bae-83d9-bb09dfbf7506" />
+  </component>
 </module>
