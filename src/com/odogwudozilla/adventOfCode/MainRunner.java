@@ -2,10 +2,7 @@ package com.odogwudozilla.adventOfCode;
 
 import java.net.URISyntaxException;
 
-import com.odogwudozilla.adventOfCode.binaryDiagnostic.BinaryDiagnostic;
-import com.odogwudozilla.adventOfCode.dive.Dive;
-import com.odogwudozilla.adventOfCode.giantSquid.GiantSquid;
-import com.odogwudozilla.adventOfCode.sonarSweep.SonarSweep;
+import com.odogwudozilla.adventOfCode.event2021.giantSquid.GiantSquid;
 
 public class MainRunner {
 

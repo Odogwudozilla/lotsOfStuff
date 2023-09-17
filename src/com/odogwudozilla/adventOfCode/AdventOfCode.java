@@ -1,5 +1,8 @@
 package com.odogwudozilla.adventOfCode;
 
+import java.io.InputStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,9 +27,22 @@ public class AdventOfCode {
 
 	public static void main(String[] args) {
 		AdventOfCode calc = new AdventOfCode();
+		Path path1 = FileSystems.getDefault().getPath(".");
 
-		calc.twoSum2020();
-		calc.threeSum2020();
+		Path path2 = FileSystems.getDefault().getPath("Foo.txt");
+
+		Path path3 = FileSystems.getDefault().getPath(".").toAbsolutePath();
+
+		Path path4 = FileSystems.getDefault().getPath("").toAbsolutePath();
+		System.out.println(path1);
+		System.out.println(path2);
+		System.out.println(path3);
+		System.out.println(path4);
+
+		InputStream classFile = calc.getClass().getResourceAsStream("testFile.txt");
+
+		//calc.twoSum2020();
+		//calc.threeSum2020();
 
 	}
 

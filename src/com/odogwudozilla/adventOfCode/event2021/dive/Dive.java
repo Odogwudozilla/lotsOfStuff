@@ -1,4 +1,4 @@
-package com.odogwudozilla.adventOfCode.dive;
+package com.odogwudozilla.adventOfCode.event2021.dive;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;

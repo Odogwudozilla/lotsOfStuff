@@ -1,4 +1,4 @@
-package com.odogwudozilla.adventOfCode.binaryDiagnostic;
+package com.odogwudozilla.adventOfCode.event2021.binaryDiagnostic;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
