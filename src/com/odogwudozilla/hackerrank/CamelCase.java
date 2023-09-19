@@ -1,8 +1,13 @@
 package com.odogwudozilla.hackerrank;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class CamelCase {
+    private static final Logger logger = LoggerFactory.getLogger(CamelCase.class);
+
     public static void main(String[] args) {
-        System.out.println(countWords("oneTwoThree"));
+        logger.info(String.valueOf(countWords("oneTwoThree")));
     }
 
     public static int countWords(String s) {
