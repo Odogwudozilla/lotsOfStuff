@@ -17,7 +17,7 @@ import com.odogwudozilla.adventOfCode.IinitiateGeneralFunctions;
  */
 public class GiantSquid implements IinitiateGeneralFunctions {
 	// the absolute path to the input data
-	private static final Path filePath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\giantSquid\\giantSquid1.txt");
+	private static final Path filePath = Paths.get(ABSOLUTE_PATH + "\\src\\com\\odogwudozilla\\adventOfCode\\event2021\\giantSquid\\giantSquid1.txt");
 
 	int[] drawnNumbers = new int[100];
 

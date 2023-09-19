@@ -6,7 +6,7 @@ public class CamelCase {
     }
 
     public static int countWords(String s) {
-        if (s.length() == 0 || s.length() == 1) return s.length();
+        if (s.isEmpty() || s.length() == 1) return s.length();
 
         char[] sArr = s.toCharArray();
         int frequencyCamelCase = 0;
